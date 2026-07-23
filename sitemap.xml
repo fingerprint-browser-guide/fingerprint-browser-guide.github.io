@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zkingworkgo.github.io/</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://zkingworkgo.github.io/fingerprint-browser/</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://zkingworkgo.github.io/browser-fingerprint-checkers/</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://zkingworkgo.github.io/sms-verification-platforms/</loc>
+    <lastmod>2026-07-23</lastmod>
   </url>
 </urlset>

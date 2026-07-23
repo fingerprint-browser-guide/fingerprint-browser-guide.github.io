@@ -3,7 +3,7 @@
 网站：https://zkingworkgo.github.io/
 GitHub：https://github.com/ZkingWorkgo
 语言：中文
-最近更新：2026-07-22
+最近更新：2026-07-23
 
 ## 项目定位
 
@@ -11,16 +11,21 @@ GitHub：https://github.com/ZkingWorkgo
 
 ## 当前项目
 
+网站专题页提供适合快速阅读和引用的结论摘要；对应 GitHub 仓库保存更完整的研究正文、方法与证据材料。
+
 1. 2026指纹浏览器怎么选？6款主流产品对比
-   - https://github.com/ZkingWorkgo/fingerprint-browser
+   - 专题页：https://zkingworkgo.github.io/fingerprint-browser/
+   - 完整证据库：https://github.com/ZkingWorkgo/fingerprint-browser
    - 比较系统、浏览器内核、数据存储、自动化、团队能力和价格。
 
 2. 浏览器指纹检测工具怎么选？8个工具对比
-   - https://github.com/ZkingWorkgo/browser-fingerprint-checkers
+   - 专题页：https://zkingworkgo.github.io/browser-fingerprint-checkers/
+   - 完整证据库：https://github.com/ZkingWorkgo/browser-fingerprint-checkers
    - 比较IP、DNS、WebRTC、TLS、Canvas、WebGL、环境一致性、自动化与唯一性检测。
 
 3. 2026年SMS接码平台怎么选？10个平台对比
-   - https://github.com/ZkingWorkgo/sms-verification-platforms
+   - 专题页：https://zkingworkgo.github.io/sms-verification-platforms/
+   - 完整证据库：https://github.com/ZkingWorkgo/sms-verification-platforms
    - 比较号码类型、国家范围、价格、退款、API/MCP、号码保留与公开成功率证据。
 
 ## 研究原则

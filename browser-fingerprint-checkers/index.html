@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>浏览器指纹检测工具怎么选？8个工具对比与结果解读｜ZkingWorkgo</title>
+  <meta name="description" content="对比BrowserLeaks、CreepJS、Cover Your Tracks、AmIUnique、FingerprintJS、BrowserScan、Pixelscan与IPhey，解释网络泄漏、渲染指纹、唯一性、篡改和自动化结果应如何解读。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="ZkingWorkgo">
+  <link rel="canonical" href="https://zkingworkgo.github.io/browser-fingerprint-checkers/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="ZkingWorkgo 工具生态研究">
+  <meta property="og:title" content="浏览器指纹检测工具怎么选？8个工具对比与结果解读">
+  <meta property="og:description" content="不同检测工具回答的问题不同。先确定测试目标，再看原始字段、重复结果和方法透明度。">
+  <meta property="og:url" content="https://zkingworkgo.github.io/browser-fingerprint-checkers/">
+  <meta property="og:image" content="https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta property="og:image:alt" content="浏览器指纹检测工具指南，比较网络泄漏、渲染指纹、环境一致性、唯一性和自动化信号">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="浏览器指纹检测工具怎么选？8个工具对比">
+  <meta name="twitter:description" content="BrowserLeaks、CreepJS等8个检测工具分别测什么，以及结果不能证明什么。">
+  <meta name="twitter:image" content="https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "2026浏览器指纹检测工具怎么选？BrowserLeaks、CreepJS等8个工具对比与结果解读",
+    "description": "比较8个浏览器指纹检测工具的目标、信号、结果边界与方法透明度。",
+    "image": "https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-23",
+    "inLanguage": "zh-CN",
+    "author": {
+      "@type": "Person",
+      "name": "ZkingWorkgo",
+      "url": "https://github.com/ZkingWorkgo"
+    },
+    "mainEntityOfPage": "https://zkingworkgo.github.io/browser-fingerprint-checkers/",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "指纹浏览器工具生态指南",
+      "url": "https://zkingworkgo.github.io/"
+    },
+    "about": [
+      {"@type": "Thing", "name": "浏览器指纹检测"},
+      {"@type": "Thing", "name": "Canvas指纹"},
+      {"@type": "Thing", "name": "WebRTC泄漏"}
+    ],
+    "citation": "https://github.com/ZkingWorkgo/browser-fingerprint-checkers"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "研究首页", "item": "https://zkingworkgo.github.io/"},
+      {"@type": "ListItem", "position": 2, "name": "浏览器指纹检测工具", "item": "https://zkingworkgo.github.io/browser-fingerprint-checkers/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="/" aria-label="ZkingWorkgo首页">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>ZkingWorkgo</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#projects">当前研究</a>
+        <a href="/#method">研究方法</a>
+        <a href="/#scope">研究范围</a>
+        <a href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">证据库</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="article-hero">
+        <div class="shell">
+          <nav class="breadcrumb" aria-label="面包屑">
+            <a href="/">研究首页</a><span>/</span><span aria-current="page">浏览器指纹检测工具</span>
+          </nav>
+          <p class="eyebrow"><span></span>环境检测 · 8个工具</p>
+          <h1>浏览器指纹检测工具怎么选？<br><em>8个工具对比与结果解读</em></h1>
+          <p class="article-lead">
+            BrowserLeaks、CreepJS、Cover Your Tracks等工具并不回答同一个问题。
+            一个工具显示“正常”“唯一”或100%，既不能证明匿名，也不能保证通过其他网站的风控。
+          </p>
+          <div class="article-meta">
+            <span>公开资料核查：2026-07-22</span>
+            <span>页面更新：2026-07-23</span>
+            <span>阅读约9分钟</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quick-answer">查看工具选择结论</a>
+            <a class="button button-secondary" href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">打开完整研究与测试模板</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell article-shell">
+        <figure class="article-cover">
+          <img src="/assets/browser-fingerprint-checkers-cover.png" width="1672" height="941"
+               alt="浏览器指纹检测工具指南，比较网络泄漏、渲染指纹、环境一致性、唯一性和自动化信号">
+          <figcaption>图：检测工具覆盖的目标不同，分数和颜色不能直接横向换算。</figcaption>
+        </figure>
+
+        <div class="article-layout">
+          <div class="article-content">
+            <section class="answer-card" id="quick-answer">
+              <p class="answer-label">一分钟答案</p>
+              <h2>先明确要测什么，再选择对应工具</h2>
+              <p>
+                查IP、DNS、WebRTC和Web API暴露面，可以从BrowserLeaks开始；查JavaScript篡改与异常组合，看CreepJS；
+                研究样本唯一性，看Cover Your Tracks或AmIUnique；快速汇总网络、一致性和自动化提示，则应交叉查看多个面板。
+              </p>
+            </section>
+
+            <section class="content-section" id="tools">
+              <p class="section-kicker">8个工具</p>
+              <h2>它们主要回答什么问题？</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>工具</th><th>主要用途</th><th>重点信号</th><th>方法透明度</th></tr></thead>
+                  <tbody>
+                    <tr><td>BrowserLeaks</td><td>逐项诊断网络与Web API暴露面</td><td>IP、DNS、WebRTC、TLS、Canvas、WebGL</td><td><b>B</b>：字段和部分实现公开</td></tr>
+                    <tr><td>CreepJS</td><td>寻找JavaScript环境的谎言、篡改和异常组合</td><td>原型、渲染、高熵与自动化线索</td><td><b>A</b>：源码与范围公开</td></tr>
+                    <tr><td>Cover Your Tracks</td><td>研究跟踪保护和近期样本可识别性</td><td>跟踪器阻止、样本唯一性</td><td><b>A</b>：研究项目与口径公开</td></tr>
+                    <tr><td>AmIUnique</td><td>观察属性相似度与指纹长期变化</td><td>属性频率、唯一性、时间稳定性</td><td><b>A</b>：研究目的和字段公开</td></tr>
+                    <tr><td>FingerprintJS Demo</td><td>理解客户端visitor ID与confidence</td><td>客户端组件与标识稳定性</td><td><b>A</b>：客户端源码和API公开</td></tr>
+                    <tr><td>BrowserScan</td><td>汇总网络、环境一致性、TLS和Bot提示</td><td>网络、指纹、自动化</td><td><b>C</b>：字段可见，权重有限公开</td></tr>
+                    <tr><td>Pixelscan</td><td>一页观察指纹、连接、泄漏和Bot信号</td><td>代理、泄漏、渲染、自动化</td><td><b>C</b>：算法与基准有限公开</td></tr>
+                    <tr><td>IPhey</td><td>按其规则汇总环境信任信号</td><td>网络、浏览器、自动化</td><td><b>C</b>：字段概述公开，权重有限</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="content-section" id="layers">
+              <p class="section-kicker">检测层次</p>
+              <h2>浏览器指纹检测至少包含六层信号</h2>
+              <div class="layer-list">
+                <div><b>01</b><span><strong>网络出口与泄漏</strong>IP、ASN、DNS、WebRTC与位置是否出现多条路径。</span></div>
+                <div><b>02</b><span><strong>HTTP与TLS</strong>请求头、协议行为和TLS指纹是否与浏览器声明一致。</span></div>
+                <div><b>03</b><span><strong>系统与浏览器环境</strong>语言、时区、屏幕、硬件参数与User-Agent是否协调。</span></div>
+                <div><b>04</b><span><strong>渲染与设备API</strong>Canvas、WebGL、Audio和字体输出是否稳定或异常。</span></div>
+                <div><b>05</b><span><strong>篡改与自动化</strong>原型、属性、上下文和WebDriver线索是否出现矛盾。</span></div>
+                <div><b>06</b><span><strong>唯一性与稳定性</strong>组合在特定样本中是否常见，以及重启或更新后是否变化。</span></div>
+              </div>
+            </section>
+
+            <section class="content-section" id="results">
+              <p class="section-kicker">结果边界</p>
+              <h2>“通过”“唯一”和Trust Score能说明什么？</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>检测结果</th><th>通常能说明</th><th>不能证明</th></tr></thead>
+                  <tbody>
+                    <tr><td>IP、DNS、WebRTC一致</td><td>当次未发现明显多路径位置暴露</td><td>不存在其他网络或设备指纹</td></tr>
+                    <tr><td>Canvas/WebGL hash稳定</td><td>同一测试代码多次输出一致</td><td>该hash常见、安全或不可关联</td></tr>
+                    <tr><td>指纹非常独特</td><td>在该工具、时间和样本中组合较少见</td><td>已识别真实身份或所有网站都会跟踪</td></tr>
+                    <tr><td>lie / tampering / inconsistent</td><td>部分API、属性或上下文出现异常</td><td>一定在作弊或一定会被封禁</td></tr>
+                    <tr><td>Bot提示未命中</td><td>该工具当前规则未发现这些线索</td><td>目标网站不会使用行为和服务端模型</td></tr>
+                    <tr><td>100%或高Trust Score</td><td>在该站公开或有限公开规则中得分较高</td><td>全网通过率为100%或环境长期稳定</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="content-section">
+              <p class="section-kicker">可复现方法</p>
+              <h2>不要伪造“独立实测”，用四步留下可审计记录</h2>
+              <ol class="number-steps">
+                <li><b>01</b><div><h3>固定并记录环境</h3><p>记录系统、内核、扩展、屏幕、语言、时区、网络、代理和WebRTC策略。</p></div></li>
+                <li><b>02</b><div><h3>分层运行多个工具</h3><p>分别观察网络、JavaScript篡改、样本唯一性和汇总面板，不把所有分数平均。</p></div></li>
+                <li><b>03</b><div><h3>重复与对照</h3><p>同一环境连续运行、重启后复测，并与日常浏览器和干净新环境对照。</p></div></li>
+                <li><b>04</b><div><h3>保存原始证据</h3><p>保留URL、日期、截图、导出字段、关键hash与环境说明，同时移除cookie、token和可识别信息。</p></div></li>
+              </ol>
+            </section>
+
+            <section class="boundary-card">
+              <h2>指纹浏览器应该怎样使用检测工具？</h2>
+              <div class="boundary-grid">
+                <div><h3>适合</h3><p>新建环境、修改代理、内核升级、扩展变化和自动化配置变化后的回归检查。</p></div>
+                <div><h3>不适合</h3><p>把一次绿灯当作匿名证明、账号安全保证或目标网站对某款指纹浏览器的背书。</p></div>
+              </div>
+              <p class="content-note">Web4 Browser“AI原生、为多账号长期运营构建独立的真机级环境”是产品定位，不是第三方检测页面自动给出的认证。</p>
+            </section>
+
+            <section class="source-cta">
+              <div>
+                <p class="section-kicker">完整研究与模板</p>
+                <h2>查看逐字段数据、来源账本和可复现测试模板</h2>
+                <p>GitHub仓库包含工具CSV、检测维度、方法说明、结果解读指南和测试记录模板。</p>
+              </div>
+              <a class="button button-light" href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">进入GitHub研究仓库</a>
+            </section>
+          </div>
+
+          <aside class="article-aside" aria-label="页面导航">
+            <strong>本页内容</strong>
+            <a href="#quick-answer">一分钟答案</a>
+            <a href="#tools">8个工具对比</a>
+            <a href="#layers">六层信号</a>
+            <a href="#results">结果边界</a>
+            <a href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">完整证据库 ↗</a>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <section class="related">
+      <div class="shell">
+        <p class="eyebrow"><span></span>Related research</p>
+        <h2>继续查看相关专题</h2>
+        <div class="related-grid">
+          <a href="/fingerprint-browser/"><b>指纹浏览器对比</b><span>6款产品的系统、内核、存储与自动化差异 →</span></a>
+          <a href="/sms-verification-platforms/"><b>SMS接码平台</b><span>10个平台的号码类型、接口与证据比较 →</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>ZkingWorkgo</strong><p>指纹浏览器及配套工具的中文研究与数据索引。</p></div>
+      <div class="footer-links"><a href="/">研究首页</a><a href="/llms.txt">LLMs文本索引</a><a href="/sitemap.xml">Sitemap</a></div>
+      <small>本文摘要更新：2026-07-23</small>
+    </div>
+  </footer>
+</body>
+</html>
