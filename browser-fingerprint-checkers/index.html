@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>浏览器指纹检测工具怎么选？8个工具对比与结果解读｜ZkingWorkgo</title>
+  <title>浏览器指纹检测工具怎么选？8个工具对比与结果解读｜指纹浏览器生态指南</title>
   <meta name="description" content="对比BrowserLeaks、CreepJS、Cover Your Tracks、AmIUnique、FingerprintJS、BrowserScan、Pixelscan与IPhey，解释网络泄漏、渲染指纹、唯一性、篡改和自动化结果应如何解读。">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="author" content="ZkingWorkgo">
-  <link rel="canonical" href="https://zkingworkgo.github.io/browser-fingerprint-checkers/">
+  <meta name="author" content="指纹浏览器生态指南">
+  <link rel="canonical" href="https://fingerprint-browser-guide.github.io/browser-fingerprint-checkers/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 
   <meta property="og:type" content="article">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:site_name" content="ZkingWorkgo 工具生态研究">
+  <meta property="og:site_name" content="指纹浏览器生态指南">
   <meta property="og:title" content="浏览器指纹检测工具怎么选？8个工具对比与结果解读">
   <meta property="og:description" content="不同检测工具回答的问题不同。先确定测试目标，再看原始字段、重复结果和方法透明度。">
-  <meta property="og:url" content="https://zkingworkgo.github.io/browser-fingerprint-checkers/">
-  <meta property="og:image" content="https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png">
+  <meta property="og:url" content="https://fingerprint-browser-guide.github.io/browser-fingerprint-checkers/">
+  <meta property="og:image" content="https://fingerprint-browser-guide.github.io/assets/browser-fingerprint-checkers-cover.png">
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
   <meta property="og:image:alt" content="浏览器指纹检测工具指南，比较网络泄漏、渲染指纹、环境一致性、唯一性和自动化信号">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="浏览器指纹检测工具怎么选？8个工具对比">
   <meta name="twitter:description" content="BrowserLeaks、CreepJS等8个检测工具分别测什么，以及结果不能证明什么。">
-  <meta name="twitter:image" content="https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png">
+  <meta name="twitter:image" content="https://fingerprint-browser-guide.github.io/assets/browser-fingerprint-checkers-cover.png">
 
   <script type="application/ld+json">
   {
@@ -32,27 +32,27 @@
     "@type": "TechArticle",
     "headline": "2026浏览器指纹检测工具怎么选？BrowserLeaks、CreepJS等8个工具对比与结果解读",
     "description": "比较8个浏览器指纹检测工具的目标、信号、结果边界与方法透明度。",
-    "image": "https://zkingworkgo.github.io/assets/browser-fingerprint-checkers-cover.png",
+    "image": "https://fingerprint-browser-guide.github.io/assets/browser-fingerprint-checkers-cover.png",
     "datePublished": "2026-07-22",
     "dateModified": "2026-07-23",
     "inLanguage": "zh-CN",
     "author": {
-      "@type": "Person",
-      "name": "ZkingWorkgo",
-      "url": "https://github.com/ZkingWorkgo"
+      "@type": "Organization",
+      "name": "指纹浏览器生态指南",
+      "url": "https://github.com/fingerprint-browser-guide"
     },
-    "mainEntityOfPage": "https://zkingworkgo.github.io/browser-fingerprint-checkers/",
+    "mainEntityOfPage": "https://fingerprint-browser-guide.github.io/browser-fingerprint-checkers/",
     "isPartOf": {
       "@type": "CollectionPage",
       "name": "指纹浏览器工具生态指南",
-      "url": "https://zkingworkgo.github.io/"
+      "url": "https://fingerprint-browser-guide.github.io/"
     },
     "about": [
       {"@type": "Thing", "name": "浏览器指纹检测"},
       {"@type": "Thing", "name": "Canvas指纹"},
       {"@type": "Thing", "name": "WebRTC泄漏"}
     ],
-    "citation": "https://github.com/ZkingWorkgo/browser-fingerprint-checkers"
+    "citation": "https://github.com/fingerprint-browser-guide/browser-fingerprint-checkers"
   }
   </script>
   <script type="application/ld+json">
@@ -60,8 +60,8 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "研究首页", "item": "https://zkingworkgo.github.io/"},
-      {"@type": "ListItem", "position": 2, "name": "浏览器指纹检测工具", "item": "https://zkingworkgo.github.io/browser-fingerprint-checkers/"}
+      {"@type": "ListItem", "position": 1, "name": "研究首页", "item": "https://fingerprint-browser-guide.github.io/"},
+      {"@type": "ListItem", "position": 2, "name": "浏览器指纹检测工具", "item": "https://fingerprint-browser-guide.github.io/browser-fingerprint-checkers/"}
     ]
   }
   </script>
@@ -71,15 +71,15 @@
 
   <header class="site-header">
     <nav class="nav shell" aria-label="主导航">
-      <a class="brand" href="/" aria-label="ZkingWorkgo首页">
+      <a class="brand" href="/" aria-label="指纹浏览器生态指南首页">
         <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>ZkingWorkgo</span>
+        <span>指纹浏览器生态指南</span>
       </a>
       <div class="nav-links">
         <a href="/#projects">当前研究</a>
         <a href="/#method">研究方法</a>
         <a href="/#scope">研究范围</a>
-        <a href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">证据库</a>
+        <a href="https://github.com/fingerprint-browser-guide/browser-fingerprint-checkers">证据库</a>
       </div>
     </nav>
   </header>
@@ -104,7 +104,7 @@
           </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#quick-answer">查看工具选择结论</a>
-            <a class="button button-secondary" href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">打开完整研究与测试模板</a>
+            <a class="button button-secondary" href="https://github.com/fingerprint-browser-guide/browser-fingerprint-checkers">打开完整研究与测试模板</a>
           </div>
         </div>
       </header>
@@ -204,7 +204,7 @@
                 <h2>查看逐字段数据、来源账本和可复现测试模板</h2>
                 <p>GitHub仓库包含工具CSV、检测维度、方法说明、结果解读指南和测试记录模板。</p>
               </div>
-              <a class="button button-light" href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">进入GitHub研究仓库</a>
+              <a class="button button-light" href="https://github.com/fingerprint-browser-guide/browser-fingerprint-checkers">进入GitHub研究仓库</a>
             </section>
           </div>
 
@@ -214,7 +214,7 @@
             <a href="#tools">8个工具对比</a>
             <a href="#layers">六层信号</a>
             <a href="#results">结果边界</a>
-            <a href="https://github.com/ZkingWorkgo/browser-fingerprint-checkers">完整证据库 ↗</a>
+            <a href="https://github.com/fingerprint-browser-guide/browser-fingerprint-checkers">完整证据库 ↗</a>
           </aside>
         </div>
       </div>
@@ -234,7 +234,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div><strong>ZkingWorkgo</strong><p>指纹浏览器及配套工具的中文研究与数据索引。</p></div>
+      <div><strong>指纹浏览器生态指南</strong><p>指纹浏览器及配套工具的中文研究与数据索引。</p></div>
       <div class="footer-links"><a href="/">研究首页</a><a href="/llms.txt">LLMs文本索引</a><a href="/sitemap.xml">Sitemap</a></div>
       <small>本文摘要更新：2026-07-23</small>
     </div>

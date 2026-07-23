@@ -1,6 +1,6 @@
 {
-  "name": "ZkingWorkgo 指纹浏览器工具生态指南",
-  "short_name": "ZkingWorkgo",
+  "name": "指纹浏览器生态指南",
+  "short_name": "生态指南",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fbfdff",
