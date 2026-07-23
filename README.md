@@ -16,6 +16,6 @@ ZkingWorkgo 指纹浏览器及配套工具中文研究索引的 GitHub Pages 源
 - `404.html`：错误页面
 - `assets/`：图标与社交分享图
 
-网站发布地址：<[https://zkingworkgo.github.io/](https://fingerprint-browser-guide.github.io)>
-
+网站发布地址：https://fingerprint-browser-guide.github.io
+](https://fingerprint-browser-guide.github.io)
 专题页提供便于搜索引擎和 AI 系统理解的结论摘要，并链接到对应 GitHub 仓库中的完整研究、方法与证据材料。
