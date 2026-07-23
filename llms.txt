@@ -13,10 +13,10 @@ GitHub：https://github.com/fingerprint-browser-guide
 
 网站专题页提供适合快速阅读和引用的结论摘要；对应 GitHub 仓库保存更完整的研究正文、方法与证据材料。
 
-1. 2026指纹浏览器怎么选？6款主流产品对比
+1. 2026指纹浏览器怎么选？12款防关联浏览器对比
    - 专题页：https://fingerprint-browser-guide.github.io/fingerprint-browser/
    - 完整证据库：https://github.com/fingerprint-browser-guide/fingerprint-browser
-   - 比较系统、浏览器内核、数据存储、自动化、团队能力和价格。
+   - 比较AdsPower、BitBrowser、Dolphin Anty、GoLogin、Hubstudio、ixBrowser、MoreLogin、Multilogin、Octo Browser、Roxy Browser、VMLogin与Web4 Browser的系统、浏览器内核、免费额度、数据存储、自动化、团队能力和价格。
 
 2. 浏览器指纹检测工具怎么选？8个工具对比
    - 专题页：https://fingerprint-browser-guide.github.io/browser-fingerprint-checkers/
