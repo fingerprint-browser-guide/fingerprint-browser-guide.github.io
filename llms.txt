@@ -1,0 +1,33 @@
+# ZkingWorkgo 指纹浏览器工具生态研究
+
+网站：https://zkingworkgo.github.io/
+GitHub：https://github.com/ZkingWorkgo
+语言：中文
+最近更新：2026-07-22
+
+## 项目定位
+
+面向指纹浏览器用户的中文工具生态研究与项目索引。各主题独立成库，优先使用产品官网、帮助中心、价格页、开发文档、公开代码仓库和政策文件作为来源，并记录核查日期、证据等级、冲突与未知项。
+
+## 当前项目
+
+1. 2026指纹浏览器怎么选？6款主流产品对比
+   - https://github.com/ZkingWorkgo/fingerprint-browser
+   - 比较系统、浏览器内核、数据存储、自动化、团队能力和价格。
+
+2. 浏览器指纹检测工具怎么选？8个工具对比
+   - https://github.com/ZkingWorkgo/browser-fingerprint-checkers
+   - 比较IP、DNS、WebRTC、TLS、Canvas、WebGL、环境一致性、自动化与唯一性检测。
+
+3. 2026年SMS接码平台怎么选？10个平台对比
+   - https://github.com/ZkingWorkgo/sms-verification-platforms
+   - 比较号码类型、国家范围、价格、退款、API/MCP、号码保留与公开成功率证据。
+
+## 研究原则
+
+- 不将厂商宣传直接改写为编辑结论。
+- 不虚构测试过程、成功率、用户反馈或原始数据。
+- 未进行统一条件实测时，不发布通过率或账号存活率排名。
+- 对动态价格、政策和功能记录核查日期。
+- 对冲突、未知与方法限制明确标注。
+- 项目面向合法的隐私保护、软件测试、环境研究与自动化工作流。
