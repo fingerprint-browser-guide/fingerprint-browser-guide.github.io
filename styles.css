@@ -202,6 +202,37 @@ h1 em {
   gap: 14px;
 }
 
+.topic-quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  color: var(--slate);
+  font-size: 13px;
+  font-weight: 700;
+}
+.topic-quicklinks > span {
+  color: var(--muted);
+  font-weight: 650;
+}
+.topic-quicklinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 5px 11px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  transition: color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.topic-quicklinks a:hover {
+  color: var(--blue);
+  border-color: rgba(11, 99, 229, .35);
+  transform: translateY(-1px);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -943,6 +974,20 @@ h1 em {
   .hero { padding: 62px 0 70px; }
   h1 { font-size: 45px; }
   .hero-intro { font-size: 16px; }
+  .topic-quicklinks {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+  .topic-quicklinks a {
+    justify-content: space-between;
+    min-height: 42px;
+    padding: 8px 13px;
+  }
+  .topic-quicklinks a::after {
+    content: "→";
+    color: var(--blue);
+  }
   .metrics { gap: 24px; }
   .metrics dt { font-size: 22px; }
   .hero-visual { min-height: 400px; transform: scale(.86); margin: -30px -30px; }
