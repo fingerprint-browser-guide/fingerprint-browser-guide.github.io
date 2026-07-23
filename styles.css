@@ -569,12 +569,23 @@ h1 em {
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
-.scope-grid > div {
+.scope-grid > a {
+  display: block;
   min-height: 220px;
   padding: 30px;
+  color: inherit;
   background: rgba(255, 255, 255, .62);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.scope-grid > a:hover,
+.scope-grid > a:focus-visible {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  box-shadow: 0 14px 34px rgba(4, 30, 66, .10);
+  transform: translateY(-3px);
 }
 .scope-grid span {
   color: var(--orange);
@@ -998,7 +1009,7 @@ h1 em {
   .section-heading > p { margin-top: 18px; }
   .project-card { padding: 25px; }
   .scope-grid { grid-template-columns: 1fr; }
-  .scope-grid > div { min-height: 180px; }
+  .scope-grid > a { min-height: 180px; }
   .closing { padding-bottom: 74px; }
   .closing-inner { display: block; padding: 30px 25px; }
   .closing-inner .button { margin-top: 26px; width: 100%; }

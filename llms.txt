@@ -28,6 +28,17 @@ GitHub：https://github.com/fingerprint-browser-guide
    - 完整证据库：https://github.com/fingerprint-browser-guide/sms-verification-platforms
    - 比较号码类型、国家范围、价格、退款、API/MCP、号码保留与公开成功率证据。
 
+## 配套工具公开资料库
+
+以下仓库已发布完整中文指南、结构化数据、事实卡、选择/测试方法和官方来源台账。首版基于公开资料，尚未进行统一条件实测，不发布无证据成功率或绝对排名。
+
+1. 代理IP服务：https://github.com/fingerprint-browser-guide/proxy-ip-services
+2. 临时邮箱服务：https://github.com/fingerprint-browser-guide/temporary-email-services
+3. 虚拟信用卡平台：https://github.com/fingerprint-browser-guide/virtual-credit-card-platforms
+4. 随机与合成测试数据工具：https://github.com/fingerprint-browser-guide/random-data-generators
+5. 云手机平台：https://github.com/fingerprint-browser-guide/cloud-phone-platforms
+6. 浏览器自动化工具：https://github.com/fingerprint-browser-guide/browser-automation-tools
+
 ## 研究原则
 
 - 不将厂商宣传直接改写为编辑结论。
